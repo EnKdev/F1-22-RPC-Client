@@ -1,0 +1,170 @@
+[
+  {
+    "GameId": 0,
+    "Name": "Mercedes-AMG Petronas F1 Team"
+  },
+  {
+    "GameId": 1,
+    "Name": "Scuderia Ferrari"
+  },
+  {
+    "GameId": 2,
+    "Name": "Oracle Red Bull Racing"
+  },
+  {
+    "GameId": 3,
+    "Name": "Williams Racing"
+  },
+  {
+    "GameId": 4,
+    "Name": "Aston Martin Aramco Cognizant F1 Team"
+  },
+  {
+    "GameId": 5,
+    "Name": "BWT Alpine F1 Team"
+  },
+  {
+    "GameId": 6,
+    "Name": "Scuderia AlphaTauri"
+  },
+  {
+    "GameId": 7,
+    "Name": "Haas F1 Team"
+  },
+  {
+    "GameId": 8,
+    "Name": "McLaren F1 Team"
+  },
+  {
+    "GameId": 9,
+    "Name": "Alfa Romeo F1 Team ORLEN"
+  },
+  {
+    "GameId": 85,
+    "Name": "Mercedes (2020)"
+  },
+  {
+    "GameId": 86,
+    "Name": "Ferrari (2020)"
+  },
+  {
+    "GameId": 87,
+    "Name": "Red Bull (2020)"
+  },
+  {
+    "GameId": 88,
+    "Name": "Williams (2020)"
+  },
+  {
+    "GameId": 89,
+    "Name": "Racing Point (2020)"
+  },
+  {
+    "GameId": 90,
+    "Name": "Renault (2020)"
+  },
+  {
+    "GameId": 91,
+    "Name": "AlphaTauri (2020)"
+  },
+  {
+    "GameId": 92,
+    "Name": "Haas (2020)"
+  },
+  {
+    "GameId": 93,
+    "Name": "McLaren (2020)"
+  },
+  {
+    "GameId": 94,
+    "Name": "Alfa Romeo (2020)"
+  },
+  {
+    "GameId": 95,
+    "Name": "Aston Martin DB11 V12"
+  },
+  {
+    "GameId": 96,
+    "Name": "Aston Martin Vantage F1 Edition"
+  },
+  {
+    "GameId": 97,
+    "Name": "Aston Martin Vantage Safety Car"
+  },
+  {
+    "GameId": 98,
+    "Name": "Ferrari F8 Tributo"
+  },
+  {
+    "GameId": 99,
+    "Name": "Ferrari Roma"
+  },
+  {
+    "GameId": 100,
+    "Name": "McLaren 7205"
+  },
+  {
+    "GameId": 101,
+    "Name": "McLaren Artura"
+  },
+  {
+    "GameId": 102,
+    "Name": "Mercedes AMG GT Black Series Safety Car"
+  },
+  {
+    "GameId": 103,
+    "Name": "Mercedes AMG GTR Pro"
+  },
+  {
+    "GameId": 104,
+    "Name": "F1 Custom Team"
+  },
+  {
+    "GameId": 106,
+    "Name": "Prema (2021)"
+  },
+  {
+    "GameId": 107,
+    "Name": "Uni-Virtuosi (2021)"
+  },
+  {
+    "GameId": 108,
+    "Name": "Carlin (2021)"
+  },
+  {
+    "GameId": 109,
+    "Name": "Hitech (2021)"
+  },
+  {
+    "GameId": 110,
+    "Name": "Art GP (2021)"
+  },
+  {
+    "GameId": 111,
+    "Name": "MP Motorsport (2021)"
+  },
+  {
+    "GameId": 112,
+    "Name": "Charouz (2021)"
+  },
+  {
+    "GameId": 113,
+    "Name": "Dams (2021)"
+  },
+  {
+    "GameId": 114,
+    "Name": "Campos (2021)"
+  },
+  {
+    "GameId": 115,
+    "Name": "BWT (2021)"
+  },
+  {
+    "GameId": 116,
+    "Name": "Trident (2021)"
+  },
+  {
+    "GameId": 117,
+    "Name": "Mercedes AMG GT Black Series"
+  }
+]
