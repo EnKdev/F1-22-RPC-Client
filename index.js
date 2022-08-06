@@ -19,7 +19,7 @@ f1Client.start();
 let teamId = 0;
 let teamName = "";
 let raceCompletion = 0.0;
-let lapNumber = 0;
+// let lapNumber = 0;
 let formulaType = 0;
 let sessionType = "";
 
@@ -52,14 +52,14 @@ f1Client.on("participants", (pData) => {
     GetTeamNameFromId(teamId);
 });
 
-f1Client.on("lapData", (lData) => {
+/* f1Client.on('lapData', (lData) => {
     if (formulaType === 2) { // F2 check
         lapNumber = lData.m_lapData[21].m_currentLapNum;
     } else {
         lapNumber = lData.m_lapData[19].m_currentLapNum;
     }
     console.log(lData);
-});
+}); */
 
 f1Client.on('session', (sData) => {
     if (interval) {
@@ -69,8 +69,8 @@ f1Client.on('session', (sData) => {
     formulaType = sData.m_formula;
     sessionType = `${SessionTypes[sData.m_sessionType].Type}`;
 
-    raceCompletion = (100.0 / sData.m_totalLaps) * lapNumber;
-    raceCompletion = raceCompletion.toFixed(2);
+    /* raceCompletion = (100.0 / sData.m_totalLaps) * lapNumber;
+    raceCompletion = raceCompletion.toFixed(2); */
 
     if (sessionType === "Free Practice 1" ||
         sessionType === "Free Practice 2" ||
@@ -94,8 +94,8 @@ f1Client.on('session', (sData) => {
                sessionType === "Race 2" ||
                sessionType === "Race 3") {
         Client.updatePresence({
-            details: `${sessionType} - ${TrackList[sData.m_trackId].Name} - [${raceCompletion}% done]`,
-            state: `Driving for ${teamName} - Lap ${lapNumber}/${sData.m_totalLaps}`,
+            details: `${sessionType} - ${TrackList[sData.m_trackId].Name}`,
+            state: `Driving for ${teamName} - ${sData.m_totalLaps} Laps`,
             smallImageKey: "backcover",
             smallImageText: "F1 22",
             largeImageKey: `${LargeImages[sData.m_trackId].imageKey}`,

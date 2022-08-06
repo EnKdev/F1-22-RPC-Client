@@ -79,5 +79,4 @@ typings/
 # Custom
 build/**
 release_builds/**
-rpcImg/**
 .idea/**

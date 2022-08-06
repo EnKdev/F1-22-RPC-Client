@@ -5,8 +5,8 @@ Simple Discord RPC client for the game F1 22.
 
 - Displays the current track image when on track
 - Displays the team the player is driving for
-- Display how many rounds the player has driven and how many rounds in a race are left [e.g Lap 13/52]
-- Display the percentage of completion of a race
+- (Disabled until further notice) ~~Display how many rounds the player has driven and how many rounds in a race are left [e.g Lap 13/52]~~
+- (Disabled until further notice) ~~Display the percentage of completion of a race~~
 - **NEW**: Distincts between F1 and F2 Gamemodes!
 
 -----
@@ -31,7 +31,7 @@ Simple Discord RPC client for the game F1 22.
 ##### Build
 `npm run package-win`
 
-Current Version: 1.0.0
+Current Version: 1.0.1
 
 -----
 
