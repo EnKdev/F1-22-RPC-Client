@@ -19,9 +19,10 @@ f1Client.start();
 let teamId = 0;
 let teamName = "";
 let raceCompletion = 0.0;
-// let lapNumber = 0;
+let lapNumber = 0;
 let formulaType = 0;
 let sessionType = "";
+let playerIndex = 0;
 
 function resetStatus() {
     Client.updatePresence({
@@ -39,29 +40,7 @@ function GetTeamNameFromId(id) {
     });
 };
 
-f1Client.on("participants", (pData) => {
-    pData.m_participants.some(function (idx) {
-        if (idx.m_aiControlled === 0) {
-            teamId = idx.m_teamId;
-        }
-    });
-
-    console.log(`TeamId: ${teamId}`);
-    console.log(pData);
-
-    GetTeamNameFromId(teamId);
-});
-
-/* f1Client.on('lapData', (lData) => {
-    if (formulaType === 2) { // F2 check
-        lapNumber = lData.m_lapData[21].m_currentLapNum;
-    } else {
-        lapNumber = lData.m_lapData[19].m_currentLapNum;
-    }
-    console.log(lData);
-}); */
-
-f1Client.on('session', (sData) => {
+f1Client.on('session', function (sData) {
     if (interval) {
         clearInterval(interval);
     }
@@ -69,8 +48,8 @@ f1Client.on('session', (sData) => {
     formulaType = sData.m_formula;
     sessionType = `${SessionTypes[sData.m_sessionType].Type}`;
 
-    /* raceCompletion = (100.0 / sData.m_totalLaps) * lapNumber;
-    raceCompletion = raceCompletion.toFixed(2); */
+    raceCompletion = (100.0 / sData.m_totalLaps) * lapNumber;
+    raceCompletion = raceCompletion.toFixed(2);
 
     if (sessionType === "Free Practice 1" ||
         sessionType === "Free Practice 2" ||
@@ -94,8 +73,10 @@ f1Client.on('session', (sData) => {
                sessionType === "Race 2" ||
                sessionType === "Race 3") {
         Client.updatePresence({
-            details: `${sessionType} - ${TrackList[sData.m_trackId].Name}`,
-            state: `Driving for ${teamName} - ${sData.m_totalLaps} Laps`,
+            details: `${sessionType} - ${
+                TrackList[sData.m_trackId].Name
+            } - [${raceCompletion}%]`,
+            state: `Driving for ${teamName} - Lap ${lapNumber}/${sData.m_totalLaps}`,
             smallImageKey: "backcover",
             smallImageText: "F1 22",
             largeImageKey: `${LargeImages[sData.m_trackId].imageKey}`,
@@ -108,6 +89,29 @@ f1Client.on('session', (sData) => {
     interval = setInterval(() => {
         resetStatus();
     }, 5000);
+});
+
+f1Client.on('participants', (pData) => {
+    playerIndex = pData.m_header.m_playerCarIndex;
+    teamId = pData.m_participants[playerIndex].m_teamId;
+
+    console.log(`TeamId: ${teamId}`);
+    console.log(pData);
+
+    GetTeamNameFromId(teamId);
+});
+
+// Thank you so much, RobCoder44!
+f1Client.on('lap', (lData) => {
+    lapNumber = 1;
+
+    try {
+        lapNumber = lData.m_lapData[playerIndex].m_currentLapNum;
+    } catch (e) {
+        console.error("FAILED TO PARSE LAP NUMBER", e);
+    }
+
+    console.log(lapNumber);
 });
 
 Client.updatePresence({
