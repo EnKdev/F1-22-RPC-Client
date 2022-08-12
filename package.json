@@ -17,7 +17,7 @@
     "f1-22-udp": "^2.0.0"
   },
   "devDependencies": {
-    "electron": "^20.0.1",
+    "electron": "^20.0.2",
     "electron-packager": "^15.5.1"
   }
 }
