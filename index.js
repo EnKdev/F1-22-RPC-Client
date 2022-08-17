@@ -101,8 +101,8 @@ f1Client.on('participants', (pData) => {
     GetTeamNameFromId(teamId);
 });
 
-// Thank you so much, RobCoder44!
-f1Client.on('lap', (lData) => {
+// Previously fixed with the help from RobCoder44
+f1Client.on('lapData', (lData) => {
     lapNumber = 1;
 
     try {
