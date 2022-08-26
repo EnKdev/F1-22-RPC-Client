@@ -9,6 +9,7 @@ Simple Discord RPC client for the game F1 22.
 - **NEW**: Distincts between F1 and F2 Gamemodes!
 
 -----
+### Notes if you want to build the app from source:
 **Remember to set the Client ID of your RPC inside the RpcConfig.json file and to set the UDP IP to 127.0.0.1! - Port: 20777**
 
 **An example Client ID of a Rich Presence Client can be like this: 012345678901234567**
@@ -19,16 +20,20 @@ Simple Discord RPC client for the game F1 22.
 
 **The UDP IP and Port have to be set in-game under the Telemetry Settings!**
 
+---
+
+### If you just want to use the app:
 **A precompiled binary build will also be provided for those that are lazy to do things themselves. (I feel you on that one)**
 
 -----
+### To build the app from source:
 ##### Test the project
 `npm start`
 
 ##### Build
 `npm run package-win`
 
-Current Version: 1.0.2
+Current Version: 1.0.3.1
 
 -----
 ##### Noteworthy info:
@@ -45,6 +50,6 @@ Thanks to [RobCoder44](https://github.com/RobCoder44) for helping me with fixing
 - [F1 22 UDP](https://github.com/raweceek-temeletry/f1-22-udp)
 -----
 ##### Built with:
-- JetBrains WebStorm 2022.2
-- Node 14.15.3
+- JetBrains WebStorm 2022.2.1
+- Node 16.17.0
 - NPM 7.19.0
